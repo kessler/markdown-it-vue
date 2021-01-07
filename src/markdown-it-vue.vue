@@ -24,9 +24,9 @@ import MarkdownItDeflist from 'markdown-it-deflist'
 import MarkdownItAbbreviation from 'markdown-it-abbr'
 import MarkdownItInsert from 'markdown-it-ins'
 import MarkdownItMark from 'markdown-it-mark'
-import MarkdownItKatex from 'markdown-it-katex'
+//import MarkdownItKatex from 'markdown-it-katex'
 import MarkdownItTasklists from 'markdown-it-task-lists'
-import MarkdownItLatex from 'markdown-it-latex'
+//import MarkdownItLatex from 'markdown-it-latex'
 import MarkdownItContainer from 'markdown-it-container'
 import MarkdownItGithubToc from 'markdown-it-github-toc'
 import MarkdownItSourceMap from 'markdown-it-source-map'
@@ -38,7 +38,7 @@ import MarkdownItHighlight from './markdown-it-highlight'
 import MarkdownItFontAwsome from './markdown-it-font-awsome'
 import MarkdownItImage from './markdown-it-image'
 import 'github-markdown-css'
-import 'markdown-it-latex/dist/index.css'
+//import 'markdown-it-latex/dist/index.css'
 
 import echarts from 'echarts/dist/echarts.simple.min'
 import mermaid from 'mermaid'
@@ -51,7 +51,7 @@ const DEFAULT_OPTIONS_LINK_ATTRIBUTES = {
     rel: 'noopener'
   }
 }
-const DEFAULT_OPTIONS_KATEX = { throwOnError: false, errorColor: '#cc0000' }
+//const DEFAULT_OPTIONS_KATEX = { throwOnError: false, errorColor: '#cc0000' }
 const DEFAULT_OPTIONS_TASKLISTS = null
 const DEFAULT_OPTIONS_GITHUBTOC = {
   tocFirstLevel: 2,
@@ -85,7 +85,7 @@ export default {
             linkify: true
           },
           linkAttributes: DEFAULT_OPTIONS_LINK_ATTRIBUTES,
-          katex: DEFAULT_OPTIONS_KATEX,
+          //katex: DEFAULT_OPTIONS_KATEX,
           tasklists: DEFAULT_OPTIONS_TASKLISTS,
           githubToc: DEFAULT_OPTIONS_GITHUBTOC,
           mermaid: DEFAULT_OPTIONS_MERMAID
@@ -140,7 +140,7 @@ export default {
   data() {
     const optMarkdownIt = this.options.markdownIt
     const linkAttributes = this.options.linkAttributes || DEFAULT_OPTIONS_LINK_ATTRIBUTES
-    const optKatex = this.options.katex || DEFAULT_OPTIONS_KATEX
+    //const optKatex = this.options.katex || DEFAULT_OPTIONS_KATEX
     const optTasklists = this.options.tasklists || DEFAULT_OPTIONS_TASKLISTS
     const optGithubToc = this.options.githubToc || DEFAULT_OPTIONS_GITHUBTOC
     const optMermaid = this.options.mermaid || DEFAULT_OPTIONS_MERMAID
@@ -157,13 +157,13 @@ export default {
       .use(MarkdownItInsert)
       .use(MarkdownItMark)
       .use(MarkdownItHighlight)
-      .use(MarkdownItLatex)
+      //.use(MarkdownItLatex)
       .use(MarkdownItSourceMap)
       .use(MarkdownItMermaid, optMermaid)
       .use(MarkdownItEcharts)
       .use(MarkdownItFlowchart)
       .use(MarkdownItLinkAttributes, linkAttributes)
-      .use(MarkdownItKatex, optKatex)
+      //.use(MarkdownItKatex, optKatex)
       .use(MarkdownItTasklists, optTasklists)
       .use(MarkdownItFontAwsome)
       .use(MarkdownItGithubToc, optGithubToc)
